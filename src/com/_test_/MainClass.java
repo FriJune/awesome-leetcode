@@ -1,5 +1,8 @@
 package com._test_;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 /**
  * @author ZhouXu
  * @version v1.0 2018-08-07
@@ -42,7 +45,50 @@ public class MainClass {
             node = node.next;
         }
 
-        System.out.println(result.length()+",555");
         return "[" + result.substring(0, result.length() - 1) + "]";
+    }
+
+    public static TreeNode stringToTreeNode(String input) {
+        input = input.trim();
+        input = input.substring(1, input.length() - 1);
+        if (input.length() == 0) {
+            return null;
+        }
+
+        String[] parts = input.split(",");
+        String item = parts[0];
+        TreeNode root = new TreeNode(Integer.parseInt(item));
+        Queue<TreeNode> nodeQueue = new LinkedList<>();
+        nodeQueue.add(root);
+
+        int index = 1;
+        while (!nodeQueue.isEmpty()) {
+            // Retrieves and removes the head of this queue
+            TreeNode node = nodeQueue.remove();
+
+            if (index == parts.length) {
+                break;
+            }
+            item = parts[index++];
+            item = item.trim();
+            if (!item.equals("null")) {
+                int leftchild = Integer.parseInt(item);
+                node.left = new TreeNode(leftchild);
+                nodeQueue.add(node.left);
+            }
+
+            if (index == parts.length) {
+                break;
+            }
+            item = parts[index++];
+            item = item.trim();
+            if (!item.equals("null")) {
+                int rightchild = Integer.parseInt(item);
+                node.right = new TreeNode(rightchild);
+                nodeQueue.add(node.right);
+            }
+        }
+
+        return root;
     }
 }
