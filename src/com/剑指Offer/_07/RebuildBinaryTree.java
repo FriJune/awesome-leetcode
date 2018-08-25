@@ -73,6 +73,5 @@ public class RebuildBinaryTree {
             TreeNode ret = new RebuildBinaryTree().reConstructBinaryTree(preorder, inorder);
             printTree(ret);
         }
-
     }
 }
