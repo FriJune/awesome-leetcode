@@ -1,4 +1,4 @@
-package com.剑指Offer._11;
+package com.剑指Offer._10;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -45,8 +45,8 @@ public class JumpFloor {
         Scanner sc = new Scanner(System.in);
         while (sc.hasNext()) {
             int target = sc.nextInt();
-            System.out.println("跳台阶：  " + jumpFloorI(target));
-            System.out.println("变态跳台阶： " + jumpFloorII(target));
+            System.out.println("跳台阶：" + jumpFloorI(target));
+            System.out.println("变态跳台阶：" + jumpFloorII(target));
         }
     }
 }
