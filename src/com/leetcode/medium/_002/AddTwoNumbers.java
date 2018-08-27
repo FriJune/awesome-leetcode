@@ -1,4 +1,4 @@
-package com.leetcode.medium;
+package com.leetcode.medium._002;
 
 import com._test_.ListNode;
 import com._test_.MainClass;
