@@ -26,7 +26,7 @@ public class RotateArray {
                     array[mid] == array[high]) {
                 return minNumber(array, low, high);
             } else if (array[mid] <= array[high]) {
-                high = mid;
+                high = mid - 1;
             } else {
                 low = mid + 1;
             }
