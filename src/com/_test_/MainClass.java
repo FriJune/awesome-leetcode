@@ -23,6 +23,21 @@ public class MainClass {
         return output;
     }
 
+    public static String integerArrayToString(int nums[], int length) {
+        if (length == 0) { return "[]"; }
+        String result = "";
+        for (int index = 0; index < length; index++) {
+            int number = nums[index];
+            result += number + ", ";
+        }
+        return "[" + result.substring(0, result.length() - 2) + "]";
+    }
+
+    public static String integerArrayToString(int nums[]) {
+        return integerArrayToString(nums, nums.length);
+    }
+
+
     public static ListNode stringToListNode(String input) {
         // Generate array from the input
         int[] nodeValues = stringToIntegerArray(input);
