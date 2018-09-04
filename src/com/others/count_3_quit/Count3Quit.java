@@ -8,7 +8,6 @@ import java.util.Scanner;
  * @version v1.0 2018-09-03
  */
 
-
 public class Count3Quit {
     // 数3退1游戏基础算法
     public static int result_01(int kidsNum) {
