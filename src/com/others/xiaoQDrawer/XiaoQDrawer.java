@@ -33,7 +33,7 @@ public class XiaoQDrawer {
             } else {
                 color[x][y] = 'Y';
             }
-            // 是否连笔继续画, Y对应的是画'/', 即右上或者左下
+            // 是否连笔继续画, B对应的是画'/', 即右上或者左下
             _dfsB(x - 1, y + 1, n, m, color);
             _dfsB(x + 1, y - 1, n, m, color);
         }
