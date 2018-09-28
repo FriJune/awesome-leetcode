@@ -14,7 +14,7 @@ public class Solution {
         int needleLen = needle.length();
 
         if (haystackLen < needleLen) return -1;
-        
+
         for (int i = 0; ; i++) {
             if (i + needleLen > haystackLen) return -1;
             for (int j = 0; ; j++) {
