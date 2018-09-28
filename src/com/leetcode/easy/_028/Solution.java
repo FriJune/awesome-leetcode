@@ -12,7 +12,9 @@ public class Solution {
     public static int strStr(String haystack, String needle) {
         int haystackLen = haystack.length();
         int needleLen = needle.length();
+
         if (haystackLen < needleLen) return -1;
+        
         for (int i = 0; ; i++) {
             if (i + needleLen > haystackLen) return -1;
             for (int j = 0; ; j++) {
