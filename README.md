@@ -1,4 +1,4 @@
-# awesome-java-algorithms
+# awesome-leetcode
 
 Part of my daily plan for studying Java Algorithms
 
