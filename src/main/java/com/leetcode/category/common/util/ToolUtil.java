@@ -75,7 +75,7 @@ public class ToolUtil {
         String[] parts = input.split(",");
         String item = parts[0];
         TreeNode root = new TreeNode(Integer.parseInt(item));
-        Queue<TreeNode> nodeQueue = new LinkedList<TreeNode>();
+        Queue<TreeNode> nodeQueue = new LinkedList<>();
         nodeQueue.add(root);
 
         int index = 1;
@@ -89,8 +89,8 @@ public class ToolUtil {
             item = parts[index++];
             item = item.trim();
             if (!item.equals("null")) {
-                int leftchild = Integer.parseInt(item);
-                node.left = new TreeNode(leftchild);
+                int leftChild = Integer.parseInt(item);
+                node.left = new TreeNode(leftChild);
                 nodeQueue.add(node.left);
             }
 
@@ -100,8 +100,8 @@ public class ToolUtil {
             item = parts[index++];
             item = item.trim();
             if (!item.equals("null")) {
-                int rightchild = Integer.parseInt(item);
-                node.right = new TreeNode(rightchild);
+                int rightChild = Integer.parseInt(item);
+                node.right = new TreeNode(rightChild);
                 nodeQueue.add(node.right);
             }
         }
